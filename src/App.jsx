@@ -1,5 +1,6 @@
 
 import SearchCoin from './Components/SearchCoin';
+import PriceDisplay from './Components/PriceDisplay';
 function App() {
 
 
@@ -7,7 +8,7 @@ function App() {
   return (
     <div >
       <SearchCoin/>
-      Hello World!
+      <PriceDisplay/>
 
     </div>
   );

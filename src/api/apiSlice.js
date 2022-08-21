@@ -9,10 +9,10 @@ export const apiSlice = createApi({
 
   endpoints: builder => ({
     getAllCoins: builder.query({
-      query: () => '/coins/list',
+      query: () => '/coins/markets?vs_currency=usd',
     }),
     getCoin: builder.query({
-      query: ({ coin,curr }) => `/simple/price?ids=${coin}&vs_currencies=${curr}`,
+      query: ({ coin ,curr }) => `/coins/markets?vs_currency=${curr}&ids=${coin}`,
     })
   })
 
