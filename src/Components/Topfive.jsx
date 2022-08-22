@@ -1,10 +1,15 @@
 import React from 'react';
-import { useGetCoinQuery } from '../api/apiSlice';
-
+import { useGetAllCoinsQuery } from '../api/apiSlice';
+import TopfiveExerpt from './TopfiveExerpt';
 
 export default function Topfive() {
-  const { data: topfive } = useGetCoinQuery({ coin:'bitcoin', curr:'usd' });
+  const { data: bitcoin } = useGetAllCoinsQuery();
+  const fivecoin = bitcoin ? bitcoin.slice(0, 5) : [];
+
   return (
-    <div>{topfive}</div>
+    <div className='flex flex-row gap-x-14'>
+
+      {fivecoin?.map(coin => <TopfiveExerpt key={coin.id} coin={coin} />)}
+    </div>
   );
 }

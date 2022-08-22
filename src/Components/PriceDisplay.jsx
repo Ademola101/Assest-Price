@@ -1,18 +1,19 @@
 import React from 'react';
 import { useGetCoinQuery } from '../api/apiSlice';
 import { useSelector } from 'react-redux';
-
+import PriceExercpt from './PriceExercpt';
 export default function PriceDisplay() {
   const search = useSelector(state => state.search);
   const searchvalue =  search === '' ? 'bitcoin' : search;
-  const { data, isError, isFetching } = useGetCoinQuery({ coin:searchvalue, curr:'usd' });
+  const { data, isError, } = useGetCoinQuery({ coin:searchvalue, curr:'usd' });
 
-  if (isFetching) {
-    return <div>Loading...</div>;}
   if (isError) {
     return <div>Error</div>;
   }
   return (
-    <div>{JSON.stringify(data)}</div>
+    <div>
+      {data?.map(coin => <PriceExercpt key={coin.id} coin={coin} />)}
+
+    </div>
   );
 }
