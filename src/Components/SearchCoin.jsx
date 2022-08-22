@@ -29,8 +29,7 @@ export default function SearchCoin() {
       <input list="coin" id="coin-choice" name="coinchoice"
         placeholder='search for coin' onChange={(e) => {
 
-          dispatch(setSearch(e.target.value));
-          e.target.value = '';}}/>
+          dispatch(setSearch(e.target.value));}}/>
 
       <datalist id="coin">
 
@@ -39,5 +38,6 @@ export default function SearchCoin() {
 
 
     </div>
+
   );
 }
