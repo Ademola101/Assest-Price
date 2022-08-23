@@ -5,7 +5,7 @@ import Topfive from './Components/Topfive';
 import { useLayoutEffect } from 'react';
 function App() {
   useLayoutEffect(() => {
-    document.body.style.backgroundColor = '#5b4379';
+    document.body.style.backgroundColor = 'hsl(242deg 36% 13%)';
   });
 
 
