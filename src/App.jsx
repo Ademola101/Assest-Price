@@ -6,6 +6,7 @@ import { useLayoutEffect } from 'react';
 function App() {
   useLayoutEffect(() => {
     document.body.style.backgroundColor = 'hsl(242deg 36% 13%)';
+    document.body.style.fontFamily = '"Roboto", sans-serif';
   });
 
 

@@ -1,10 +1,11 @@
 import React from 'react';
 import { useGetAllCoinsQuery } from '../api/apiSlice';
 import TopfiveExerpt from './TopfiveExerpt';
+import Button from './Button';
 
 export default function Topfive() {
-  const { data: coins, refetch, isLoading } = useGetAllCoinsQuery();
-  const fivecoin = coins ? coins.slice(0, 5) : [];
+  const { data: coins, isLoading } = useGetAllCoinsQuery();
+  const fivecoin = coins ? coins.slice(0, 6) : [];
   if (isLoading) {
     return (<div className="flex justify-center items-center">
       <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
@@ -14,8 +15,9 @@ export default function Topfive() {
   }
 
   return ( <div>
-    <button onClick={refetch} type="button" >Refresh</button>
-    <div className='flex flex-row gap-x-6'>
+    <Button />
+    <div className='flex flex-wrap flex-row justify-center gap-6 w-screen'>
+
 
       {fivecoin?.map(coin => <TopfiveExerpt key={coin.id} coin={coin} />)}
     </div>
