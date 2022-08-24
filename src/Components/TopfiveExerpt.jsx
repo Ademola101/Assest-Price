@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaArrowsAltH } from 'react-icons/fa';
+import { FaArrowsAltH, } from 'react-icons/fa';
+
 
 export default function TopfiveExerpt({ coin }) {
   return (
@@ -12,6 +13,7 @@ export default function TopfiveExerpt({ coin }) {
           display: 'inline-block',
         }} className='max-h-5' src={coin.image} alt={coin.name} /></span>
         <div className= {Math.sign(coin.price_change_percentage_24h) === -1 ? 'text-rose-600' : 'text-green-400' }>
+
           {coin.price_change_percentage_24h}%</div>
       </div>
       <span >

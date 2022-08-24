@@ -3,12 +3,21 @@ import SearchCoin from './Components/SearchCoin';
 import PriceDisplay from './Components/PriceDisplay';
 import Topfive from './Components/Topfive';
 import { useLayoutEffect } from 'react';
+import { useGetAllCoinsQuery } from './api/apiSlice';
 function App() {
   useLayoutEffect(() => {
     document.body.style.backgroundColor = 'hsl(242deg 36% 13%)';
     document.body.style.fontFamily = '"Roboto", sans-serif';
   });
 
+  const { isLoading } = useGetAllCoinsQuery();
+  if (isLoading) {
+    return (<div className="flex justify-center items-center">
+      <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+        <span className="visually-hidden"></span>
+      </div>
+    </div>);
+  }
 
 
   return (
