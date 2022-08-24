@@ -4,11 +4,11 @@ import { FaArrowsAltH, } from 'react-icons/fa';
 
 export default function TopfiveExerpt({ coin }) {
   return (
-    <div className='border-4 rounded-md border-neutral-400 border w-28' style={{
+    <div className='border-4 rounded-md border-neutral-400  w-28' style={{
       backgroundColor: 'hsl(242deg 25% 30%)',
     }}>
 
-      <div className='text-slate-100 text-neutral-400 text-center'>
+      <div className=' text-neutral-400 text-center'>
         {coin.name} <span><img style={{
           display: 'inline-block',
         }} className='max-h-5' src={coin.image} alt={coin.name} /></span>

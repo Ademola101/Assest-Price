@@ -1,9 +1,9 @@
 
-import SearchCoin from './Components/SearchCoin';
 import PriceDisplay from './Components/PriceDisplay';
 import Topfive from './Components/Topfive';
 import { useLayoutEffect } from 'react';
 import { useGetAllCoinsQuery } from './api/apiSlice';
+import Header from './Components/Header';
 function App() {
   useLayoutEffect(() => {
     document.body.style.backgroundColor = 'hsl(242deg 36% 13%)';
@@ -22,7 +22,7 @@ function App() {
 
   return (
     <div className='flex items-center flex-col' >
-      <SearchCoin/>
+      <Header />
       <PriceDisplay/>
       <Topfive/>
 
