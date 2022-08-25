@@ -4,8 +4,8 @@ import { FaArrowsAltH, } from 'react-icons/fa';
 
 export default function TopfiveExerpt({ coin }) {
   return (
-    <div className='border-4 rounded-md border-neutral-400  w-28' style={{
-      backgroundColor: 'hsl(242deg 25% 30%)',
+    <div className='border-4 rounded-md border-neutral-400  w-28 hover:bg-slate-900 bg-slate-800' style={{
+
     }}>
 
       <div className=' text-neutral-400 text-center'>
