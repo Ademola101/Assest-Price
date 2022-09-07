@@ -4,6 +4,8 @@ import Topfive from './Components/Topfive';
 import { useLayoutEffect } from 'react';
 import { useGetAllCoinsQuery } from './api/apiSlice';
 import Header from './Components/Header';
+import Chart from './Components/Chart';
+
 function App() {
   useLayoutEffect(() => {
     document.body.style.backgroundColor = 'hsl(242deg 36% 13%)';
@@ -11,6 +13,7 @@ function App() {
   });
 
   const { isLoading } = useGetAllCoinsQuery();
+
   if (isLoading) {
     return (<div className="flex justify-center items-center h-screen my-auto">
       <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
@@ -23,6 +26,8 @@ function App() {
   return (
     <div className='flex items-center flex-col' >
       <Header />
+      <div className='flex flex-col items-center justify-center'>
+        <Chart/> </div>
       <PriceDisplay/>
       <Topfive/>
 
