@@ -1,5 +1,5 @@
 import React from 'react';
-import { setSearch } from '../reducers/Search';
+import { setSearch, } from '../reducers/Search';
 import { useGetAllCoinsQuery } from '../api/apiSlice';
 
 import { useDispatch } from 'react-redux';
@@ -7,7 +7,13 @@ import { useDispatch } from 'react-redux';
 
 export default function SearchCoin() {
   const dispatch = useDispatch();
-
+  const clear = (e) => e.target.value ='';
+  const onChange = (e) => {
+    if (!e.nativeEvent.inputType) {
+      e.target.blur();
+    }
+    dispatch(setSearch(e.target.value));
+  };
 
   const { data: allCoins, isFetching, isError } = useGetAllCoinsQuery();
 
@@ -29,9 +35,7 @@ export default function SearchCoin() {
 
       <input className='form-label inline-block mt-4  pl-5 text-white placeholder:italic placeholder:text-white rounded-md border-slate-700
        bg-slate-500' list="coin" id="coin-choice" name="coinchoice"
-      placeholder='search for coin' onChange={(e) => {
-
-        dispatch(setSearch(e.target.value));}}/>
+      placeholder='search for coin' onChange={onChange}  onClick = {clear} onFocus = {clear}/>
 
       <datalist id="coin">
 

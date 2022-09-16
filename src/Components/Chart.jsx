@@ -1,7 +1,7 @@
 import React from 'react';
 import { useGetMarketChartQuery } from '../api/apiSlice';
 import { useSelector } from 'react-redux';
-import { Line,   LineChart } from 'recharts';
+import { Line,   LineChart, XAxis, YAxis, Tooltip, CartesianGrid, Legend, } from 'recharts';
 
 
 export default function Chart() {
@@ -12,17 +12,27 @@ export default function Chart() {
   });
 
 
-
+  console.log(priceAndDate);
 
   if (isError) {
-    return <div>Error</div>;
+    return null;
   }
   return (
-    <div>
+    <div className='bg-slate-50'>
 
-      <LineChart width={400} height={400} data={priceAndDate}>
+
+      <LineChart width={600} height={400} data={priceAndDate}>
         <Line type="monotone" dataKey="price" stroke="#8884d8" />
+        <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
+        <XAxis dataKey="date" />
+        <YAxis label={{ value: 'Prices', angle: -90, position: 'insideLeft' }} />
+
+
+
+        <Tooltip/>
+        <Legend verticalAlign="top" height={36}/>
       </LineChart>
+
     </div>
   );
 }
