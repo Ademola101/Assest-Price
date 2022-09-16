@@ -1,5 +1,4 @@
 
-import PriceDisplay from './Components/PriceDisplay';
 import Topfive from './Components/Topfive';
 import { useLayoutEffect } from 'react';
 import { useGetAllCoinsQuery } from './api/apiSlice';
@@ -28,7 +27,6 @@ function App() {
       <Header />
       <div className='flex flex-col items-center justify-center'>
         <Chart/> </div>
-      <PriceDisplay/>
       <Topfive/>
 
 

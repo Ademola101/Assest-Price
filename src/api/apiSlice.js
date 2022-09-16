@@ -15,7 +15,7 @@ export const apiSlice = createApi({
       query: ({ coin ,curr }) => `/coins/markets?vs_currency=${curr}&ids=${coin}`,
     }),
     getMarketChart: builder.query({
-      query: ({ coin = 'bitcoin', interval = 'weekly' }) => `coins/${coin}/market_chart?vs_currency=usd&days=1&${interval}`
+      query: ({ coin = 'bitcoin', interval = 'daily' }) => `coins/${coin}/market_chart?vs_currency=usd&days=4&${interval}`
     })
   })
 
