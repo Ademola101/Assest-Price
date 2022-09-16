@@ -10,9 +10,11 @@ export default function PriceExercpt({ coin }) {
 
       <div>
         <div>
-          <div className='flex flex-col justify-center items-center'>
-            <img className='max-h-7' src= {coin.image} alt =  {coin.name}  /> <div>{coin.name}
-            Current price </div>
+          <div className='flex flex-col justify-center items-center bg-green-700 w-64 m-auto text-white'>
+            <img className='max-h-7' src= {coin.image} alt =  {coin.name}  /> <div>
+            Current price
+
+            </div>
 
             <span>1 {coin.name} <FaArrowsAltH style={{
               display: 'inline-block',
