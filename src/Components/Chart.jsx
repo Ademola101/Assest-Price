@@ -21,11 +21,13 @@ export default function Chart() {
     <div className='bg-slate-50'>
 
 
-      <LineChart width={600} height={400} data={priceAndDate}>
-        <Line type="monotone" dataKey="price" stroke="#8884d8" />
+      <LineChart width={600} height={400} data={priceAndDate}
+        margin={{ top: 5, right: 50, left: 70, bottom: 5 }}
+      >
+        <Line type="monotone" dot={false} dataKey="price" stroke="#8884d8" />
         <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
         <XAxis dataKey="date" />
-        <YAxis label={{ value: 'Prices', angle: -90, position: 'insideLeft' }} />
+        <YAxis label={{ value: 'Prices', angle: -90, position: 'insideLeft' }}  />
 
 
 
