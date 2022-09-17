@@ -19,9 +19,6 @@ export default function Chart() {
   });
 
 
-
-  console.log(priceAndDate);
-
   if (isError) {
     return null;
   }
