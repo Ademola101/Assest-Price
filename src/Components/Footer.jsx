@@ -7,7 +7,7 @@ export default function Footer() {
       <div className='flex '>
         <a aria-label='Github' href="https://github.com/Ademola101"> <AiFillGithub className='text-2xl mx-2' /></a>
         <a aria-label='Linkedin' href="https://www.linkedin.com/in/ademola-ogunmokun10/"><AiFillLinkedin className='text-2xl mx-2' /></a>
-        <a aria-label='Twitter' href="https://www.linkedin.com/in/ademola-ogunmokun10/"> <AiFillTwitterCircle className='text-2xl mx-2' /></a>
+        <a aria-label='Twitter' href="https://twitter.com/lessorfag"> <AiFillTwitterCircle className='text-2xl mx-2' /></a>
 
       </div>
 
