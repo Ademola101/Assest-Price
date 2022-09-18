@@ -4,6 +4,7 @@ import { useLayoutEffect } from 'react';
 import { useGetAllCoinsQuery } from './api/apiSlice';
 import Header from './Components/Header';
 import Chart from './Components/Chart';
+import Footer from './Components/Footer';
 
 function App() {
   useLayoutEffect(() => {
@@ -23,11 +24,12 @@ function App() {
 
 
   return (
-    <div className='flex items-center flex-col' >
+    <div className='flex items-center flex-col h-screen' >
       <Header />
       <div className='flex flex-col items-center justify-center'>
         <Chart/> </div>
       <Topfive/>
+      <Footer/>
 
 
     </div>
