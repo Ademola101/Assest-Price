@@ -1,10 +1,16 @@
 import React from 'react';
 import { FaArrowsAltH, } from 'react-icons/fa';
+import { setSearch } from '../reducers/Search';
+import { useDispatch } from 'react-redux';
+
 
 
 export default function TopfiveExerpt({ coin }) {
+
+  const dispatch = useDispatch();
+
   return (
-    <div className='border-4 rounded-md border-neutral-400  w-28 hover:bg-slate-900 bg-slate-800' style={{
+    <div onClick={() => dispatch(setSearch(coin.id))} className='border-4 rounded-md border-neutral-400  w-28 hover:bg-slate-900 bg-slate-800' style={{
 
     }}>
 
