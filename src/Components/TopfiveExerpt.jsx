@@ -10,9 +10,8 @@ export default function TopfiveExerpt({ coin }) {
   const dispatch = useDispatch();
 
   return (
-    <div onClick={() => dispatch(setSearch(coin.id))} className='border-4 rounded-md border-neutral-400  w-28 hover:bg-slate-900 bg-slate-800' style={{
-
-    }}>
+    <div onClick={() => dispatch(setSearch(coin.id))} className='border-4
+     rounded-md border-neutral-400  w-28 hover:bg-slate-900 bg-slate-800 cursor-pointer' >
 
       <div className=' text-neutral-400 text-center'>
         {coin.name} <span><img style={{

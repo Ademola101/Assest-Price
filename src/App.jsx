@@ -25,10 +25,13 @@ function App() {
 
   return (
     <div className='flex items-center flex-col h-screen' >
-      <Header />
-      <div className='flex flex-col items-center justify-center'>
-        <Chart/> </div>
-      <Topfive/>
+      <div className='grow'>
+        <Header />
+        <div className='flex flex-col items-center justify-center'>
+          <Chart/> </div>
+        <Topfive/>
+      </div>
+
       <Footer/>
 
 

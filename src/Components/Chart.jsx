@@ -7,7 +7,7 @@ import PriceDisplay from './PriceDisplay';
 
 export default function Chart() {
   const search = useSelector(state => state.search);
-  const { data, isError } = useGetMarketChartQuery({ coin:search });
+  const { data, isError, isLoading } = useGetMarketChartQuery({ coin:search });
 
   const priceAndDate = data?.prices.map((item) => {
 
@@ -20,6 +20,9 @@ export default function Chart() {
 
 
   if (isError) {
+    return null;
+  }
+  if (isLoading) {
     return null;
   }
 
