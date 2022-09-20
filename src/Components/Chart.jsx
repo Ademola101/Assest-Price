@@ -14,18 +14,22 @@ export default function Chart() {
     return { price: item[1], date: new Date(item[0]).toLocaleDateString() };
   });
 
-  // const highestPrice = data?.prices.reduce((a, b) => {
-  //   return a[1] > b[1] ? a : b;
-  // });
+  const highestPrice = data?.prices[1].reduce((a, b) => {
+    return a[1] > b[1] ? a : b;
+  });
 
-  const highestPrice = Math.max(...data.prices.map((item) => item[1]));
+
 
 
   if (isError) {
     return null;
   }
   if (isLoading) {
-    return null;
+    return (<div className="flex justify-center items-center h-screen my-auto">
+      <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+        <span className="visually-hidden"></span>
+      </div>
+    </div>);
   }
 
   return (
@@ -38,7 +42,7 @@ export default function Chart() {
           <CartesianGrid stroke="#cccccc" strokeDasharray="5 5" />
           <XAxis dataKey="date"  />
           <YAxis padding={{ top: 10 }} label={{ angle: -90, position: 'insideLeft',      }}
-            domain={[0, highestPrice * 2]}
+            domain={[0, highestPrice ]}
             tickFormatter={(value) =>  '$' + value.toFixed(2)
 
             }

@@ -17,7 +17,7 @@ export default function TopfiveExerpt({ coin }) {
         {coin.name} <span><img style={{
           display: 'inline-block',
         }} className='max-h-5' src={coin.image} alt={coin.name} /></span>
-        <div className= {Math.sign(coin.price_change_percentage_24h) === -1 ? 'text-rose-600' : 'text-green-400' }>
+        <div className= {coin.price_change_percentage_24h < 0 ? 'text-rose-600' : 'text-green-400' }>
 
           {coin.price_change_percentage_24h}%</div>
       </div>
