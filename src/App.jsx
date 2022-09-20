@@ -5,6 +5,7 @@ import { useGetAllCoinsQuery } from './api/apiSlice';
 import Header from './Components/Header';
 import Chart from './Components/Chart';
 import Footer from './Components/Footer';
+import SearchCoin from './Components/SearchCoin';
 
 function App() {
   useLayoutEffect(() => {
@@ -27,6 +28,7 @@ function App() {
     <div className='flex items-center flex-col h-screen' >
       <div className='grow'>
         <Header />
+        <SearchCoin/>
         <div className='flex flex-col items-center justify-center'>
           <Chart/> </div>
         <Topfive/>
