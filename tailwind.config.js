@@ -5,10 +5,14 @@ module.exports = {
   ],
   theme: {
     extend: {
+      // backgroundImage: {
+      //   'crypto': "url('/img/photo.jpg')"
+      // }
     },
     fontFamily: {
       'header':['Merriweather']
     },
+    
   },
   plugins: [],
 }

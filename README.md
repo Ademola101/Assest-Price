@@ -1,5 +1,5 @@
 # Crypto Asset Price 
-A simple crypto price tracker with search functionality.
+A simple crypto price app for  tracking crypto coins price and get the chart data from [CoinGecko](https://www.coingecko.com/en/api) API.
 
 
 ## Prerequisite
