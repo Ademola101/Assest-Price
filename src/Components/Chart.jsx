@@ -14,9 +14,11 @@ export default function Chart() {
     return { price: item[1], date: new Date(item[0]).toLocaleDateString() };
   });
 
-  const highestPrice = data?.prices.reduce((a, b) => {
-    return a[1] > b[1] ? a : b;
-  });
+  // const highestPrice = data?.prices.reduce((a, b) => {
+  //   return a[1] > b[1] ? a : b;
+  // });
+
+  const highestPrice = Math.max(...data.prices.map((item) => item[1]));
 
 
   if (isError) {
