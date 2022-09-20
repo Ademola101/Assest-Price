@@ -31,7 +31,11 @@ export default function SearchCoin() {
     return <div>Error</div>;
   }
   return (
-    <div>
+    <div className='flex justify-center items-center  flex-col mb-12'>
+
+      <h1 className='text-white mt-4 text-lg font-header'>
+        Search  for a coin to get its price, market cap, and 24h price change
+      </h1>
 
       <input className='form-label inline-block mt-4  pl-5 text-white placeholder:italic placeholder:text-white rounded-md border-slate-700
        bg-slate-500' list="coin" id="coin-choice" name="coinchoice"
