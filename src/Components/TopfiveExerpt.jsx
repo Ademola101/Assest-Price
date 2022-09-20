@@ -5,6 +5,7 @@ import { useDispatch } from 'react-redux';
 
 
 
+
 export default function TopfiveExerpt({ coin }) {
 
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ export default function TopfiveExerpt({ coin }) {
       <div className='text-center font-medium text-slate-100'>
       &#36;{coin.current_price}
       </div>
+
     </div>
   );
 }

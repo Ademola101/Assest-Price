@@ -5,7 +5,7 @@ import PriceExercpt from './PriceExercpt';
 export default function PriceDisplay() {
   const search = useSelector(state => state.search);
   const searchvalue =  search === '' ? 'bitcoin' : search;
-  const { data, isError, } = useGetCoinQuery({ coin:searchvalue, curr:'usd' });
+  const { data, isError, } = useGetCoinQuery(searchvalue);
 
   if (isError) {
     return <div>Error</div>;

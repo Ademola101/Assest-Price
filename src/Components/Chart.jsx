@@ -6,17 +6,19 @@ import PriceDisplay from './PriceDisplay';
 
 
 export default function Chart() {
-  const search = useSelector(state => state.search);
-  const { data, isError, isLoading } = useGetMarketChartQuery({ coin:search });
+  const searchValue = useSelector(state => state.search);
+  const { data:marketData, isError, isLoading } = useGetMarketChartQuery({ coin:searchValue });
 
-  const priceAndDate = data?.prices.map((item) => {
+
+  const priceAndDate = marketData?.prices.map((item) => {
 
     return { price: item[1], date: new Date(item[0]).toLocaleDateString() };
   });
 
-  const highestPrice = data?.prices[1].reduce((a, b) => {
+  const highestPrice = marketData?.prices[1].reduce((a, b) => {
     return a[1] > b[1] ? a : b;
   });
+
 
 
 
