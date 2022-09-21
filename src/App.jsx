@@ -6,6 +6,7 @@ import Header from './Components/Header';
 import Chart from './Components/Chart';
 import Footer from './Components/Footer';
 import SearchCoin from './Components/SearchCoin';
+import { AiOutlineLoading3Quarters } from 'react-icons/ai';
 
 function App() {
   useLayoutEffect(() => {
@@ -15,10 +16,11 @@ function App() {
 
   const { isLoading } = useGetAllCoinsQuery();
 
-  if (isLoading) {
-    return (<div className="flex justify-center items-center h-screen my-auto">
-      <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
-        <span className="visually-hidden"></span>
+  while (isLoading) {
+    return (<div className="flex justify-center items-center h-screen my-auto  text-white">
+      <div  role="status">
+        <AiOutlineLoading3Quarters className="spinner-border animate-spin inline-block "/>
+        <span className="visually-hidden"> Loading, Please wait</span>
       </div>
     </div>);
   }
