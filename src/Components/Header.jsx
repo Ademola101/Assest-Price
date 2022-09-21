@@ -6,7 +6,6 @@ export default function Header() {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const [showLinks, setShowLinks] = useState(false);
   const onClick = () => {
-    console.log(showLinks);
     setShowLinks(!showLinks);};
 
 
@@ -33,8 +32,8 @@ export default function Header() {
         Crypto Tracker Chart
         </span>
       </div>
-      {showLinks || screenWidth > 764 && <Menu />}
-      {screenWidth < 764 && showLinks && <Menu />}
+      { screenWidth > 764 && <Menu />}
+      {screenWidth < 764 && showLinks && <Menu handleClose={onClick}/>}
     </div>
   );
 }
