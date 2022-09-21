@@ -20,7 +20,7 @@ function App() {
     return (<div className="flex justify-center items-center h-screen my-auto  text-white">
       <div  role="status">
         <AiOutlineLoading3Quarters className="spinner-border animate-spin inline-block "/>
-        <span className="visually-hidden"> Loading, Please wait</span>
+        <span className="visually-hidden text-lg"> Loading, Please wait</span>
       </div>
     </div>);
   }
