@@ -10,7 +10,7 @@ export default function Topfive() {
 
   return ( <div>
     {/* <Button /> */}
-    <div className='flex flex-wrap flex-row justify-center gap-6 w-screen mt-6 '>
+    <div className='flex flex-wrap flex-row justify-center gap-6 w-screen mt-6'>
 
 
       {sixcoin?.map(coin => <TopfiveExerpt key={coin.id} coin={coin} />)}

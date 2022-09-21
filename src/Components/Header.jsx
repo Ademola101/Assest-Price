@@ -28,7 +28,7 @@ export default function Header() {
       <div className='text-white md:m-4 md:w-1/4 text-center w-10/12 '>
         <GiChart style={{
           display: 'inline-block',
-        }}/> <span className='uppercase ml-4'>
+        }}/> <span className='uppercase ml-4 font-bold text-lg'>
         Crypto Tracker Chart
         </span>
       </div>
