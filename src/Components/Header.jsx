@@ -20,7 +20,7 @@ export default function Header() {
   }, []);
 
   return (
-    <div className='flex flex-row w-full justify-center md:justify-start my-8 relative '>
+    <div className='flex flex-row w-full justify-center md:justify-start my-8 relative h-14 md:h-auto'>
 
       <div onClick={onClick} className='md:hidden mt-2 '> <svg  width="16" height="15" xmlns="http://www.w3.org/2000/svg">
         <path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fillRule="evenodd"/></svg></div>
