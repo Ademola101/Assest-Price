@@ -34,7 +34,7 @@ export default function SearchCoin() {
     <div className='flex justify-center items-center  flex-col mb-12'>
 
       <h1 className='text-emerald-400 mt-4 text-lg font-header mx-12 md:mx-0'>
-        Search  for a coin to get its price, market cap, and 24h price change
+        Search  for a coin to get its price and chart
       </h1>
 
       <input className='form-label inline-block mt-4 py-2 pl-5 text-white placeholder:italic placeholder:text-white rounded-md border-slate-700
