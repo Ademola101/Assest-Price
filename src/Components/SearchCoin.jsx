@@ -17,7 +17,7 @@ export default function SearchCoin() {
 
   const { data: allCoins, isFetching, isError } = useGetAllCoinsQuery();
 
-  const ids = allCoins?.map(coin => coin.id);
+  const ids = allCoins?.map(coin => coin.id).sort();
 
 
   if (isFetching) {
