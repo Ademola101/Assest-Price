@@ -8,6 +8,9 @@ module.exports = {
       // backgroundImage: {
       //   'crypto': "url('/img/photo.jpg')"
       // }
+      animation: {
+        
+      }
     },
     fontFamily: {
       'header':['Merriweather']

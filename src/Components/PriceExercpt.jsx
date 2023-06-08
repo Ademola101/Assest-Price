@@ -27,7 +27,7 @@ export default function PriceExercpt({ coin }) {
           </span> <small className= {coinDataValue.price_change_percentage_24h < 0 ? 'text-rose-600' :
             'text-green-400'}>{coinDataValue.price_change_percentage_24h}%</small> </div>
           <img className='max-h-7 mt-4' src= {coin.image} alt =  {coin.name}  />
-          {/* <div>
+          {/* <ddiv>
             Current price
 
           </div> */}
